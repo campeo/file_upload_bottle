@@ -63,3 +63,6 @@ create_files_dir(app.config['file_upload.dir'])
 
 if __name__ == '__main__':
     bottle.run(app, host='0.0.0.0', port=8080)
+else:
+    # Run using separate WSGI application server
+    application = app # pylint: disable-msg=C0103
